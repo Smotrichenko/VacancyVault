@@ -47,7 +47,7 @@ class HeadHunterAPI(VacancyAPI):
         items: List[Dict[str, Any]] = []
         page = 0
         while page < 20:
-            params = {"employer_id": employer_id, "per_page": 100, "page": page}
+            params = {"employer_id": employer_id, "per_page": 100, "page": page, "only_with_salary": True}
             try:
                 resp = requests.get(f"{self._base_url}/vacancies", headers=self._headers, params=params, timeout=15)
                 if resp.status_code != 200:
