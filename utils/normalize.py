@@ -1,15 +1,20 @@
+import html
+import re
 from typing import Any, Dict
 
 
 def normalize_employer(j: Dict[str, Any]) -> Dict[str, Any]:
     """Нормализация работодателей"""
 
+    desc_raw = j.get("description") or ""
+    desc_clean = html.unescape(re.sub(r"<[^>]+>", "", desc_raw)).strip()
+
     return {
         "employer_id": int(j["id"]),
         "name": j.get("name") or "Без названия",
         "url": j.get("alternate_url"),
         "open_vacancies": int(j.get("open_vacancies") or 0),
-        "description": j.get("description"),
+        "description": desc_clean,
     }
 
 
