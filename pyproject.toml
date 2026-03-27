@@ -1,7 +1,7 @@
 [project]
 name = "VacancyVault"
 version = "0.1.0"
-description = ""
+description = "Python service for collecting and analyzing vacancies data from hh.ru with PostgreSQL"
 authors = [
     {name = "Max_Smotr", email = "smotrichenko@yandex.ru"}
 ]
@@ -10,7 +10,8 @@ requires-python = ">=3.13"
 dependencies = [
     "requests (>=2.32.5,<3.0.0)",
     "python-dotenv (>=1.1.1,<2.0.0)",
-    "mypy (>=1.18.2,<2.0.0)"
+    "mypy (>=1.18.2,<2.0.0)",
+    "psycopg2 (>=2.9.11,<3.0.0)"
 ]
 
 
