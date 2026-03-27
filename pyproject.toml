@@ -1,7 +1,7 @@
 [project]
 name = "VacancyVault"
 version = "0.1.0"
-description = ""
+description = "Python service for collecting and analyzing vacancies data from hh.ru with PostgreSQL"
 authors = [
     {name = "Max_Smotr", email = "smotrichenko@yandex.ru"}
 ]
